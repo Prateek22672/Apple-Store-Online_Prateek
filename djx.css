@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.middle,.middle2 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 500px;
+}
+
+.wifi,.wifi1 {
+    margin: 20px;
+    width: 550px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding-right: 280px;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    border: 1.3px solid black; /* Initial border color */
+    font-weight: 500;
+}
+
+.wifi.active,.wifi1.active {
+    border: 3px solid #0071e3; /* Active border color */
+}
