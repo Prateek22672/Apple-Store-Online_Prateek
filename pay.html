@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Payment | Prateek™ - Apple (IN)</title>
+    <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <img src="l1(white).png" class="top">
+  <div class="pay">
+    <video autoplay loop>
+        <source src="v6.mp4" type="video/mp4">
+    </video>
+    <p>We encountered a problem While processing the payment.</p>
+  </div>
+  <section>
+    <div class="spinner-border text-light w-10"></div>
+  </section>
+  <div class="payx">
+    <div class="buttons">
+      <a href="index.html" class="a1">Try Again</a>
+      <!--<a href="index.html" class="a2">back</a>-->
+      <button class="a2">Back</button>
+    </div>
+    <p class="p1">Payment Secured</p>
+    <p style="margin-top: -35px;">By</p>
+    <p class="p2" style="font-family: 'The Nautigal', cursive;">Prateek&nbsp;<sup>™</sup></p>
+  </div>
+</body>
+<script>
+  let btnback = document.querySelector('button');
+
+  btnback.addEventListener('click', () =>{
+    window.history.back();
+  })
+</script>
+</html>
