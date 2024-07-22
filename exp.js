@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Example data - in a real application, you might fetch this from an API
     const orderData = {
-        id: "12345",
+        id: "7631345219",
         date: "2024-07-22",
-        status: "Out for Delivery" // Change this value to test different statuses
+        status: "Shipped" // Change this value to test different statuses
     };
 
     // Display order data
