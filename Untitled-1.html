@@ -167,39 +167,17 @@
             <source src="v6.mp4">
         </video>
 
-        <p class="video_Text">Th&hearts;nk You</p>
+        <p class="video_Text"><sup>♡</Sup>Thank You<sup>♡</Sup></p>
         <p class="video_Text_name" id="name"></p>
     </div>
 
-    <div class="all_images">
-        <div class="box1">
-            <a href="mac.html"><img src="all1.png"></a>
-            <a href="mac.html" style="color: black;"><p>Mac</p></a>
-        </div>
-        <div class="box1">
-            <a href="iphone.html"><img src="all2.png"></a>
-            <a href="iphone.html" style="color: black;"><p>iPhone</p></a>
-        </div>
-        <div class="box1">
-            <a href="ipad.html"><img src="all3.png"></a>
-            <a href="ipad.html" style="color: black;"><p>iPad</p></a>
-        </div>
-        <div class="box1">
-            <a href="mac.html"><img src="all4.png"></a>
-            <a href="mac.html" style="color: black;"><p>Apple Watch</p></a>
-        </div>
-        <div class="box1">
-            <a href="pods.html"><img src="all5.png"></a>
-            <a href="pods.html"style="color: black;"><p>AirPods</p></a>
-        </div>
-        <div class="box1">
-            <a href="prateek.html"><img src="px.png" style="width: 80px; margin-left: 28px;"></a>
-            <a href="prateek.html"><p id="le" style="color: black;">Limited_Edition</p></a>
-        </div>
-        <div class="box1">
-            <a href="a.html"><img src="all6.png"></a>
-            <a href="a.html" style="color: black;"><p>Accessories</p></a>
-        </div>
+
+    <p class="quick_links_heading">Quick Links</p>
+
+    <div class="quick_links">
+        <button id="b1">Order Status</button>
+        <button id="b1">Shopping Bag</button>
+        <button id="b1">Home</button>
     </div>
 
 
@@ -225,7 +203,7 @@
         // Check if the email exists in local storage
         if (email) {
             // Display the email in the specified element
-            document.getElementById('name').textContent = `♡${email}♡`;
+            document.getElementById('name').textContent = `${email}`;
         }
     
         // Retrieve IP address from local storage
