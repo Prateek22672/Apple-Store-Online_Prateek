@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     orderDate.textContent = orderData.date;
 
     // Display delivery date
-    deliveryDateElem.innerHTML = `<strong>Delivered by:</strong> ${formattedDeliveryDate}`;
+    deliveryDateElem.innerHTML = `<strong>Expected delivery:</strong> ${formattedDeliveryDate}`;
     document.querySelector(".order").appendChild(deliveryDateElem);
 
     // Update progress bar
