@@ -35,3 +35,52 @@ strong {
 span {
     color: #007BFF;
 }
+
+.progress-container {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10px;
+}
+
+.progress-step {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+}
+
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    font-size: 12px;
+}
+
+.progress-step.active {
+    background-color: #007BFF;
+}
+
+.progress-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(100% + 10px);
+    height: 4px;
+    background-color: #ddd;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.progress-step.active + .progress-step::before {
+    background-color: #007BFF;
+}
