@@ -170,7 +170,7 @@ nav .desktop-nav {
     height: 10px;
     background-color: #e0e0e0;
     border-radius: 5px;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .order-progress {
@@ -262,67 +262,56 @@ nav .desktop-nav {
     font-family: 'Inter', sans-serif;
 }
 
-.footer {
-    padding-left: 50px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    border: none; /* Remove default border */
-    padding-bottom: 10px;
-}
+/*------------------------------------------*/
 
-.conditions {
-    margin-top: -70px;
-    padding-left: 100px;
-    padding-right: 150px;
-    font-weight: 250;
-}
-
-.footer .conditions a {
-    color: black;
-}
 
 .footer1 {
-    border-top: 0.4px solid gray; /* Add a top border */
-    margin: 10px 200px; /* Add some space around the line */
-    display: flex;
-    font-family: 'Inter', sans-serif;
+    position: relative;
+    display: block;
+    color: rgba(53, 53, 53, 0.817);
     font-size: 14px;
-    font-weight: 300;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+
+.footer2 {
+    width: 75%;
+    border-top: 0.2px solid rgba(59, 59, 59, 0.466);
+    border-bottom: 0.2px solid rgba(59, 59, 59, 0.466);
+    position: relative;
+    margin-top: 40px;
+    padding-top: 20px;
     display: flex;
     margin-left: 150px;
+    padding-bottom: 5px;
 }
 
 .foot_logo {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 0px;
-    width: 15px;
-    opacity: 0.8;
+    width: 14px;
+    margin-left: 10px;
 }
 
-.footer1 p {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 15px;
-    color: grey;
-}
-
-.footer1 a {
-    text-decoration: none;
-}
-
-.end {
-    border-top: 1px solid gray; /* Add a top border */
-    color: gray;
-    margin: 10px 200px; /* Add some space around the line */
-    padding-top: 20px;
-    padding-bottom: 50px;
-    display: flex;
-    font-family: 'Inter', sans-serif;
+.footer2 p {
+    color: rgba(59, 59, 59, 0.689);
     font-size: 14px;
-    font-weight: 300;
-    margin-left: 150px;
+    padding-top: 2.1px;
+    padding-left: 15px;
+}
+
+.footer2 p:hover {
+    text-decoration: underline;
+}
+
+.footer3 {
+    color: rgba(59, 59, 59, 0.689);
+    position: absolute;
+    margin-top: 10px;
+    padding-top: 20px;
+    display: flex;
+    font-size: 14px;
+    margin-left: 155px;
+    padding-bottom: 40px;
 }
 
 .offcanvas-body a{
@@ -525,90 +514,39 @@ nav .desktop-nav {
         color: #eee;
     }
 
-    
-    .footer {
-        width: 100%;
-        margin-left: 0;
-        font-family: 'Inter', sans-serif;
-        font-size: 11px;
-        font-weight: 300;
-        border: none;
-        padding-bottom: 10px;
-        padding-left: 100px;
-    }
-    
-    .conditions {
-        width: 500px;
-        margin-left: -200px;
-        margin-top: -70px;
-        font-weight: 250;
-    }
-    
-    .footer .conditions a {
-        color: black;
-    }
-
-    .conditions {
-        display: none;
-    }
-
-    .conditions1 {
-        display: block;
-        padding-left: 20px;
-        padding-right: 40px;
-        font-family: 'Inter', sans-serif;
-        font-size: 11px;
-        font-weight: 300;
-        border: none;
-    }
-    
     .footer1 {
+        position: relative;
+        display: block;
+        color: rgba(53, 53, 53, 0.817);
+        font-size: 14px;
+        margin-left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+
+    .footer2 {
         width: 85%;
-        border-top: 0.4px solid gray;
-        border-bottom: 0.4px solid gray;
-        margin: 10px 0;
-        display: flex;
-        font-family: 'Inter', sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        margin-left: 20px;
-    }
-    
-    .foot_logo {
-        display: flex;
-        margin-top: 28px;
-        width: 15px;
-        opacity: 0.8;
-    }
-    
-    .footer1 p {
-        width: 100%;
-        display: flex;
-        margin-top: 25px;
-        margin-left: 20px;
-        color: grey;
-    }
-
-    .footer1 a {
-        text-decoration: none;
-    }
-
-    .footer1 a:hover {
-        text-decoration: underline;
-    }
-    
-    
-    .end {
-        width: 80%;
-        color: gray;
-        border: none;
+        border-top: 0.2px solid rgba(59, 59, 59, 0.466);
+        border-bottom: 0.2px solid rgba(59, 59, 59, 0.466);
+        position: relative;
+        margin-top: 40px;
         padding-top: 20px;
-        padding-bottom: 100px;
         display: flex;
-        font-family: 'Inter', sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        margin-left: 20px;
+        margin-left: 25px;
+        padding-bottom: 5px;
+    }
+
+    .footer3 {
+        width: 90%;
+        color: rgba(59, 59, 59, 0.689);
+        position: absolute;
+        margin-top: 10px;
+        padding-top: 20px;
+        display: flex;
+        font-size: 13.8px;
+        margin-left: 25px;
+        padding-bottom: 40px;
     }
 
 }
