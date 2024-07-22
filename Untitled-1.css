@@ -237,7 +237,7 @@ nav .desktop-nav {
     font-size: 14px;
     padding-left: 150px;
     padding-right: 150px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .footer2 {
@@ -324,6 +324,41 @@ nav .desktop-nav {
     text-decoration: none;
 }
 
+.quick_links_heading {
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 33px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.quick_links {
+    padding: 25px;
+    padding-left: 140px;
+    font-family: 'Inter', sans-serif;
+    background-color: transparent;
+}
+
+#b1 {
+    background-color: white;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    color: black;
+    border-radius: 40px;
+    margin-left: -50px;
+}
+
+#b1:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+#b1:not(:first-child) {
+    margin-left: 15px;
+}
+
 
 @media (max-width: 768px) {
 
@@ -389,7 +424,7 @@ nav .desktop-nav {
 
     .text1 {
         position: absolute;
-        margin-top: 80px;
+        margin-top: 70px;
         font-size: 18px;
         font-weight: 600;
         margin-left: 30px;
@@ -397,7 +432,7 @@ nav .desktop-nav {
     
     .text2 {
         position: absolute;
-        margin-top: 130px;
+        margin-top: 120px;
         font-size: 15px;
         font-weight: 450;
         margin-left: 20px;
@@ -407,7 +442,7 @@ nav .desktop-nav {
         position: absolute;
         text-decoration: none;
         cursor: pointer;
-        margin-top: 170px;
+        margin-top: 160px;
         font-size: 15px;
         font-weight: 450;
         margin-left: 60px;
@@ -420,7 +455,7 @@ nav .desktop-nav {
         margin: auto;
         margin-top: 50px;
         width: 95%;
-        height: 25vh;
+        height: auto;
         border-radius: 20px;
         margin-bottom: 80px;
     }
@@ -467,60 +502,45 @@ nav .desktop-nav {
 
 
 
-    .all_images {
-        background-color: #f5f5f782;
-        width: 400px;
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        padding: 10px 0;
-        margin-top: 100px;
-        padding-top: 30px;
-        margin-left: 0px;
-        z-index: 1;
-    }
+.quick_links_heading {
+    padding-top: 50px;
+    padding-left: 25px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 10px; 
+}
 
-    .all_images::-webkit-scrollbar {
-        height: 8px;
-    }
+.quick_links {
+    width: 100%;
+    padding: 25px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 0px;
+}
 
-    .all_images::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        border-radius: 10px;
-    }
+#b1 {
+    background-color: white;
+    font-size: 12px;
+    width: 100px;
+    height: 35px;
+    color: black;
+    border-radius: 40px;
+}
 
-    .box1:first-child {
-        margin-left: 0px;
-        padding-left: 750px;
-    }
+#b1:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
 
-    #le {
-        margin-left: 0;
-    }
-    
-    .box1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 0 0 auto;
-        margin: 0 10px;
-    }
+#b1:first-child {
+    margin-left: 0px;
+}
 
-    .box1 img {
-        width: 50px;
-        margin-bottom: 5px;
-    }
+#b1:not(:first-child) {
+    margin-left: 15px;
+}
 
-    .box1 p a {
-        font-size: 14px;
-        text-align: center;
-        text-decoration: none;
-        margin: 0;
-    }
-
-    .box1 a:active {
-        color: #eee;
-    }
 
 
 
