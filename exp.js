@@ -1,44 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const orderId = document.getElementById("orderId");
-    const orderDate = document.getElementById("orderDate");
-    const deliveryDateElem = document.createElement("p");
-    const progressSteps = document.querySelectorAll(".progress-step");
+document.addEventListener('DOMContentLoaded', () => {
+    const progress = document.querySelector('.order-progress');
+    const progressSteps = Array.from(document.querySelectorAll('.order-progress-step'));
 
-    // Example data - in a real application, you might fetch this from an API
-    const orderData = {
-        id: "7631345219",
-        date: "2024-07-22", // Original order date
-        status: "Shipped" // Change this value to test different statuses
+    const updateProgressBar = (currentStep) => {
+        progressSteps.forEach((step, index) => {
+            if (index <= currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+
+        const activeSteps = document.querySelectorAll('.order-progress-step.active');
+        progress.style.width = ((activeSteps.length - 1) / (progressSteps.length - 1)) * 100 + '%';
     };
 
-    // Function to add days to a date
-    function addDays(date, days) {
-        const result = new Date(date);
-        result.setDate(result.getDate() + days);
-        return result;
-    }
+    const getCurrentStep = () => {
+        // Simulate an API call to get the current order status
+        // Replace the below line with actual API call to get the order status
+        return 'Shipped'; // Example status
+    };
 
-    // Calculate the delivery date
-    const orderDateObj = new Date(orderData.date);
-    const deliveryDate = addDays(orderDateObj, 4);
-
-    // Format the delivery date
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
-
-    // Display order data
-    orderId.textContent = orderData.id;
-    orderDate.textContent = orderData.date;
-
-    // Display delivery date
-    deliveryDateElem.innerHTML = `<strong>Expected delivery:</strong> ${formattedDeliveryDate}`;
-    document.querySelector(".order").appendChild(deliveryDateElem);
-
-    // Update progress bar
-    const statuses = ["Ordered", "Shipped", "Out for Delivery", "Delivered"];
-    const currentStatusIndex = statuses.indexOf(orderData.status);
-
-    for (let i = 0; i <= currentStatusIndex; i++) {
-        progressSteps[i].classList.add("active");
-    }
+    const currentStep = getCurrentStep();
+    const stepIndex = progressSteps.findIndex(step => step.dataset.title === currentStep);
+    updateProgressBar(stepIndex);
 });
