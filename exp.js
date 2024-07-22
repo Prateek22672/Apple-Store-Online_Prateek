@@ -1,24 +1,24 @@
-const getIPAddress = async () => {
-    try {
-        const response = await fetch('https://api64.ipify.org?format=json');
-        const data = await response.json();
-        const ipAddress = data.ip;
+document.addEventListener("DOMContentLoaded", () => {
+    const orderId = document.getElementById("orderId");
+    const orderDate = document.getElementById("orderDate");
+    const progressSteps = document.querySelectorAll(".progress-step");
 
-        // Display IP address on the webpage
-        document.getElementById('ipAddress').textContent = ipAddress;
+    // Example data - in a real application, you might fetch this from an API
+    const orderData = {
+        id: "12345",
+        date: "2024-07-22",
+        status: "Out for Delivery" // Change this value to test different statuses
+    };
 
-        // Link to IP location
-        document.getElementById('ipLocation').innerHTML = `<a href="https://www.ip2location.com/demo/${ipAddress}" target="_blank">ip2location</a>`;
+    // Display order data
+    orderId.textContent = orderData.id;
+    orderDate.textContent = orderData.date;
 
-        // Store IP address in local storage
-        localStorage.setItem('userIP', ipAddress);
-        
-        // Log IP address safely to the console
-        console.log(`User's IP Address: ${ipAddress}`);
+    // Update progress bar
+    const statuses = ["Ordered", "Shipped", "Out for Delivery", "Delivered"];
+    const currentStatusIndex = statuses.indexOf(orderData.status);
 
-    } catch (error) {
-        console.error('Failed to fetch IP:', error);
+    for (let i = 0; i <= currentStatusIndex; i++) {
+        progressSteps[i].classList.add("active");
     }
-};
-
-getIPAddress();
+});
