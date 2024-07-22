@@ -3,7 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartQuantityDisplay();
 
     const checkoutButton = document.getElementById('checkout-button');
-    checkoutButton.addEventListener('click', clearCart);
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', clearCart);
+    }
+
+    const applyCouponButton = document.getElementById('applyCoupon');
+    if (applyCouponButton) {
+        applyCouponButton.addEventListener('click', applyCoupon);
+    }
+
+    const continueButtons = document.querySelectorAll('#Continue');
+    continueButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            window.history.back();
+        });
+    });
 });
 
 function clearCart() {
@@ -24,7 +38,7 @@ function displayCart() {
     const continueButton = document.getElementById('Continue');
     const signinButton = document.getElementById('signIn');
     const emptyQuote = document.getElementById('empty_cart_quote');
-    const emptyQuote2 = document.getElementById('empty_cart_quote2'); // Correct ID
+    const emptyQuote2 = document.getElementById('empty_cart_quote2');
 
     if (cartItems.length === 0) {
         emptyQuote.style.display = 'block';
@@ -36,8 +50,8 @@ function displayCart() {
         totalContainer.innerHTML = '';
         subtotalElement.innerText = '₹0.00';
         totalQuotePriceElement.innerText = '₹0.00';
-        totalTextElement.style.display = 'none'; // Hide the total text
-        cartContainerMain.style.display = 'none'; // Hide the container
+        totalTextElement.style.display = 'none';
+        cartContainerMain.style.display = 'none';
         return;
     }
 
@@ -49,14 +63,12 @@ function displayCart() {
     subtotalElement.innerText = `₹${total}.00`;
     totalQuotePriceElement.innerText = `₹${total}.00`;
     totalTextElement.innerText = `Your bag total is ₹${total}.00 or ₹5814.00/mo.^`;
-    totalTextElement.style.display = 'block'; // Ensure the total text is visible
+    totalTextElement.style.display = 'block';
 
-    // Clear existing content
     cartContainer.innerHTML = '';
-    cartContainerMain.style.display = 'block'; // Show the container
-    continueButton.style.display = 'none'; // Hide the continue button
+    cartContainerMain.style.display = 'block';
+    continueButton.style.display = 'none';
 
-    // Append product details below the total
     cartItems.forEach((item, index) => {
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
@@ -90,7 +102,7 @@ function generateQuantityOptions(selectedQuantity) {
 
 function updateQuantity(index, newQuantity) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart[index].quantity = parseInt(newQuantity);
+    cart[index].quantity = parseInt(newQuantity, 10);
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCart();
     updateCartQuantityDisplay();
@@ -108,25 +120,34 @@ function updateCartQuantityDisplay() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     const quantElement = document.getElementById('quant');
-    quantElement.innerText = totalQuantity;
-
-    if (totalQuantity > 0) {
-        quantElement.style.display = 'block';
-    } else {
-        quantElement.style.display = 'none';
-    }
-
-    if (totalQuantity > 9) {
-        quantElement.style.paddingRight = '18px'; // Apply
+    
+    if (quantElement) {
+        quantElement.innerText = totalQuantity;
+        quantElement.style.display = totalQuantity > 0 ? 'block' : 'none';
+        quantElement.style.paddingRight = totalQuantity > 9 ? '18px' : '0';
     }
 }
 
-// Select the button with the ID 'Continue'
-let btnback = document.querySelectorAll('#Continue');
-
-// Add event listener to each button in the NodeList
-btnback.forEach(button => {
-    button.addEventListener('click', () => {
-        window.history.back();
-    });
-});
+function applyCoupon() {
+    const couponInput = document.getElementById('couponInput').value.trim().toUpperCase();
+    const validCouponCode = "ff"; // Ensure this matches the expected value
+    const subtotalElement = document.getElementById('subtotal_Number');
+    const totalQuotePriceElement = document.getElementById('total_quote_price');
+    const totalTextElement = document.getElementById('total-text');
+    
+    let subtotal = parseFloat(subtotalElement.innerText.replace('₹', '').replace('.00', ''));
+    let total = parseFloat(totalQuotePriceElement.innerText.replace('₹', '').replace('.00', ''));
+    
+    console.log('Entered Coupon Code:', couponInput);
+    console.log('Valid Coupon Code:', validCouponCode);
+    
+    if (couponInput === validCouponCode) {
+        subtotalElement.innerText = '₹0.00';
+        totalQuotePriceElement.innerText = '₹0.00';
+        totalTextElement.innerText = 'Your bag total is ₹0.00 or ₹0.00/mo.^';
+    }else {
+        subtotalElement.innerText = '₹0.00';
+        totalQuotePriceElement.innerText = '₹0.00';
+        totalTextElement.innerText = 'Your bag total is ₹0.00 or ₹0.00/mo.^';
+    }
+}
