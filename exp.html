@@ -12,12 +12,13 @@
         <div class="order">
             <p><strong>Order ID:</strong> <span id="orderId">12345</span></p>
             <p><strong>Order Date:</strong> <span id="orderDate">2024-07-22</span></p>
-            <div class="progress-container">
-                <div class="progress" id="progress"></div>
-                <div class="circle active" id="ordered">Ordered</div>
-                <div class="circle" id="shipped">Shipped</div>
-                <div class="circle" id="outForDelivery">Out for Delivery</div>
-                <div class="circle" id="delivered">Delivered</div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-step active" data-title="Ordered"></div>
+                <div class="progress-step" data-title="Shipped"></div>
+                <div class="progress-step" data-title="Out for Delivery"></div>
+                <div class="progress-step" data-title="Delivered"></div>
             </div>
         </div>
     </div>
