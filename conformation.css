@@ -237,7 +237,7 @@ nav .desktop-nav {
     font-size: 14px;
     padding-left: 150px;
     padding-right: 150px;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .footer2 {
@@ -324,9 +324,11 @@ nav .desktop-nav {
     text-decoration: none;
 }
 
+/* (#!Top) Quick links and Quick links Button code*/
+
 .quick_links_heading {
     padding-top: 50px;
-    padding-left: 80px;
+    padding-left: 145px;
     font-size: 33px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
@@ -334,12 +336,12 @@ nav .desktop-nav {
 
 .quick_links {
     padding: 25px;
-    padding-left: 140px;
+    padding-left: 130px;
     font-family: 'Inter', sans-serif;
     background-color: transparent;
 }
 
-#b1 {
+#b1,#b2,#b3 {
     background-color: white;
     font-size: 15px;
     width: 120px;
@@ -349,16 +351,17 @@ nav .desktop-nav {
     margin-left: -50px;
 }
 
-#b1:hover {
+#b1:hover, #b2:hover, #b3:hover {
     background-color: black;
     cursor: pointer;
     color: white;
 }
 
-#b1:not(:first-child) {
+#b1,#b2,#b3:not(:first-child) {
     margin-left: 15px;
 }
 
+/*(#!Bottom) ^ Quick links and Quick links Button code ^ */
 
 @media (max-width: 768px) {
 
