@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Billing Page</title>
+    <link rel="stylesheet" href="gateway.css">
+</head>
+<body>
+
+
+    <img src="card.webp" class="card">
+
+    
+    <!--<p class="heading2"><i>𝙋𝙧𝙖𝙩𝙚𝙚𝙠𝙋𝙖𝙮™</i></p>-->
+    <img src="ppay.png" class="ppay">
+
+    <div class="billing-container">
+        <img src="appleCard.png" class="appleCard">
+        <h2 class="billing-title">Payment Information</h2>
+        <form class="billing-form" id="payment-form">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" name="name" placeholder="" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="" required>
+
+            <div class="row">
+                <div class="column">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="column">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+            </div>
+
+            <button type="submit" class="pay-btn">Pay Now</button>
+        </form>
+
+        <div id="otp-container" class="hidden">
+            <h2>Enter OTP</h2>
+            <form id="otp-form">
+                <label for="otp">OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="123456" required>
+                <button type="submit" class="verify-btn">Verify OTP</button>
+            </form>
+        </div>
+
+        <div id="success-message" class="hidden">
+            <p>Payment Successful!</p>
+        </div>
+    </div>
+
+    <p class="heading1"><i>Payment Secured By</i></p>
+
+    <script src="gateway.js"></script>
+</body>
+</html>
