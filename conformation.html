@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>iPhone | Prateek™ - Apple (IN)</title>
     <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="Untitled-1.css">
+    <link rel="stylesheet" href="conformation.css">
 </head>
 <body>
     <div class="nav-container">
@@ -158,7 +158,7 @@
 
     <p class="text1">Your Order Placed</p>
     <p class="text2">Thank You For Shopping!</p>
-    <a href="exp.html" class="text3">Order Status ></a>
+    <a href="status.html" class="text3">Order Status ></a>
     <img class="order" src="order.jpeg">
 
     <div class="v">
@@ -176,8 +176,8 @@
 
     <div class="quick_links">
         <button id="b1">Order Status</button>
-        <button id="b1">Shopping Bag</button>
-        <button id="b1">Home</button>
+        <button id="b2">Shopping Bag</button>
+        <button id="b3">Home</button> 
     </div>
 
 
@@ -194,19 +194,26 @@
     </div>
 
     <p class="footer3">Copyright © 2024&nbsp; Apple | Prateek™. All rights reserved.</p>
-    
+
 
     <script>
-        // Retrieve the email from local storage
-        const email = localStorage.getItem('email');
+        document.getElementById('b1').addEventListener("click", function() {
+            window.location.href = "status.html";
+        });
     
-        // Check if the email exists in local storage
+        document.getElementById('b2').addEventListener("click", function() {
+            window.location.href = "cart.html";
+        });
+    
+        document.getElementById('b3').addEventListener("click", function() {
+            window.location.href = "store.html";
+        });
+    
+        const email = localStorage.getItem('email');
         if (email) {
-            // Display the email in the specified element
-            document.getElementById('name').textContent = `${email}`;
+            document.getElementById('name').textContent = email;
         }
     
-        // Retrieve IP address from local storage
         const userIP = localStorage.getItem('userIP');
         if (userIP) {
             document.getElementById('userIP').textContent = userIP;
@@ -214,6 +221,7 @@
             document.getElementById('userIP').textContent = 'IP address not found';
         }
     </script>
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
