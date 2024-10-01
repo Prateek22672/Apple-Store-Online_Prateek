@@ -112,6 +112,7 @@ body {
 .p_span:hover {
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.753);
+    cursor: none;
     transition: color 0.5s, text-decoration 0.5s ease;
 }
 
