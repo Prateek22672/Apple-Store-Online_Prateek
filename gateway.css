@@ -8,6 +8,37 @@ body {
     height: 100vh;
 }
 
+#splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: flex;
+    opacity: 1;
+    transition: opacity 1s ease;
+    color: white;
+}
+
+.splash-content video {
+    width: 17%;
+    display: block;
+    margin: auto;
+    margin-top: -10%;
+    z-index: -1;
+}
+
+.splash-content p {
+    text-align: center;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-size: 15px;
+}
+
 .card {
     position: absolute;
     width: 200px;
@@ -132,6 +163,14 @@ body {
 }
 
 @media (max-width: 600px) {
+
+    .splash-content video {
+        width: 50%;
+        display: block;
+        margin: auto;
+        margin-top: -30%;
+        z-index: -1;
+    }
 
     .billing-container {
         background-color: white;
