@@ -209,11 +209,12 @@ span a {
     font-weight: 700;
     color: #000;
     transition: .5s;
+    text-decoration: underline;
+    transition: all 0.3s ease;
 }
 
 span a:hover {
-    text-decoration: underline;
-    color: #000;
+    color: #00000095;
 }
 
 .brand {
@@ -447,12 +448,12 @@ span a:hover {
         text-decoration: none;
         font-weight: 700;
         color: white;
-        transition: .5s;
+        transition: all 0.3s ease;
+        text-decoration: underline;
     }
     
     span a:hover {
-        text-decoration: underline;
-        color: #000;
+        color: #0000009c;
     }
     
     .brand {
