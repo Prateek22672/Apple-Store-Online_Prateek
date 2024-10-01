@@ -23,3 +23,21 @@ document.getElementById('name').addEventListener('keypress', function(event) {
         validateForm(event);
     }
 });
+
+
+const splashScreen = document.getElementById('splash-screen');
+
+if (!sessionStorage.getItem('splashShown')) {
+    splashScreen.style.display = 'flex';
+
+    setTimeout(() => {
+        splashScreen.style.opacity = '0';
+
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+            sessionStorage.setItem('splashShown', 'true');
+        }, 1000);
+    }, 2000);
+} else {
+    splashScreen.style.display = 'none';
+}
