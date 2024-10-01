@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="store.css">
 </head>
 <body>
+
+<!-- Splash Screen -->
+<div id="splash-screen" style="display: flex; opacity: 1; transition: opacity 1s ease;">
+    <div class="splash-content">
+        <img src="l1.png" alt="Loading...">
+        <p>&copy; 2024 Prateek™. All rights reserved.</p>
+    </div>
+</div>
+
     <div class="nav-container">
         <nav>
             <ul class="desktop-nav">
@@ -298,11 +307,13 @@
     </div>
 
     <p class="quick_links_heading">Quick Links</p>
+    
     <div class="quick_links">
         <button id="b1">Order Status</button>
-        <button id="b1">Shopping Help</button>
-        <button id="b1">Your Saves</button>
+        <button id="b2">Shopping Bag</button>
+        <button id="b3">Home</button> 
     </div>
+
     <div class="footer">
         <p class="conditions" style="padding-top: 100px;">◊◊ Monthly pricing is after purchase using EMI with qualifying cards at 15% pa over a 24 month tenure. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your bank, subject to your bank's terms and conditions.<br>
 
@@ -327,17 +338,7 @@
     </div>
     <p class="end">Copyright © 2024 Apple Inc &nbsp;|&nbsp; Prateek™. All rights reserved.</p>
 
-
-    <script>
-        // Retrieve the email from local storage
-        const email = localStorage.getItem('email');
-
-        // Check if the email exists in local storage
-        if (email) {
-            // Display the email in the specified element
-            document.getElementById('allx').innerHTML = `Hello ${email},<br>`;
-        }
-    </script>
+    <script src="store.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
