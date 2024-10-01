@@ -1,0 +1,464 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.v video {
+    margin-top: 50px;
+    width: 250px;
+    margin-left: 75px;
+}
+
+
+.xv {
+    width: 20px;
+    margin-top: -38.9px;
+    margin-left: -180px;
+}
+
+.cloud {
+    font-size: 23px;
+    margin-top: -15px;
+    margin-left: -140px;
+    color: white;
+}
+
+.wrapper {
+    position: relative;
+    background: url("paper.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+    backdrop-filter: blur(30px); /* Apply the blur effect */
+    z-index: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1; /* Ensures the main content is above the blur overlay */
+}
+
+.side-image {
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -480px;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 50px;
+    background: #fff;
+    padding: 0px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text p {
+    color: white;
+    font-size: 40px;
+    font-family: "Inter", sans-serif;
+    font-weight: 450;
+    margin-top: 150px;
+    margin-left: -20px;
+}
+
+.Manage {
+    color: #494949;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: -50px;
+    padding-bottom: 50px;
+}
+
+
+i {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.input-field a {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-field input:focus ~ label {
+    top: -10px;
+    font-size: 13px;
+}
+
+.input-field input:valid ~ label {
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076;
+}
+
+.input-field .input:focus,
+.input-field .input:valid {
+    border-bottom: 1px solid #743ae1;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.submit:hover {
+    background: black;
+    color: #fff;
+}
+
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.brand {
+    padding-top: 50px;
+    font-size: 40px;
+    font-family: 'The Nautigal', cursive;
+}
+
+.submit:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.submit {
+    background-color: black;
+    border-color: black;
+}
+
+.submit:active {
+    background-color: black;
+    border-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        width: 100%;
+        border: none;
+        background-color: #000000; /* Changed to pure black */
+    }
+
+    .v video {
+        margin-top: -100px;
+        width: 250px;
+        margin-left: 40px;
+        padding-bottom: 10px;
+    }
+    
+    .xv {
+        width: 19px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .cloud {
+        position: relative;
+        font-size: 21px;
+        margin-top: -105px;
+        padding-bottom: 90px;
+        margin-left: 10px;
+        color: white;
+    }
+    
+    .wrapper {
+        position: relative;
+        background: #000000; /* Changed to pure black */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 20px;
+        background-color: #000000; /* Changed to pure black */
+    }
+    
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1; /* Ensures the main content is above the blur overlay */
+    }
+    
+    .side-image {
+        background-color: #000000; /* Changed to pure black */
+        background-position: center;
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 100px;
+        position: relative;
+        margin-top: -30px;
+    }
+    
+    .row {
+        width: 400px;
+        margin-top: 20px;
+        height: 640px;
+        border-radius: 30px;
+        background: #000000; /* Changed to pure black */
+        padding: 0px;
+    }
+    
+    .text {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .text p {
+        color: white;
+        font-size: 40px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        margin-top: 350px;
+        margin-left: -10px;
+        padding-bottom: 20px;
+    }
+    
+    .Manage {
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 60px;
+        margin-left: -5px;
+        padding-bottom: 30px;
+    }
+    
+    i {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .input-box {
+        width: 330px;
+        box-sizing: border-box;
+    }
+    
+    img {
+        width: 35px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    
+    .input-box header {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 45px;
+        color: white;
+    }
+    
+    .input-field a {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 10px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 10px;
+        color: white;
+    }
+    
+    .input {
+        height: 45px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.564);
+        color: white;
+    }
+    
+    .input-box .input-field label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: .5s;
+    }
+    
+    .input-field input:focus ~ label {
+        top: -10px;
+        font-size: 13px;
+    }
+    
+    .input-field input:valid ~ label {
+        top: -10px;
+        font-size: 13px;
+        color: #5d5076;
+    }
+    
+    .input-field .input:focus,
+    .input-field .input:valid {
+        border-bottom: 1px solid #743ae1;
+    }
+    
+    .submit {
+        border: none;
+        outline: none;
+        height: 45px;
+        background: #ececec;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        transition: .4s;
+    }
+    
+    .submit:hover {
+        background: black;
+        color: #fff;
+    }
+    
+    .signin {
+        text-align: center;
+        font-size: small;
+        margin-top: -40px;
+    }
+
+    .signin span  {
+        text-decoration: none;
+        font-weight: 700;
+        color: white;
+        transition: .5s;
+    }
+
+    .signin span a {
+        text-decoration: none;
+        font-weight: 700;
+        color: white;
+        transition: .5s;
+    }
+    
+    span a:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    .brand {
+        padding-top: 30px;
+        font-size: 35px;
+        font-family: 'The Nautigal', cursive;
+        color: white;
+    }
+}
