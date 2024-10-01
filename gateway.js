@@ -20,6 +20,26 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     console.log('OTP sent to user');
 });
 
+
+const splashScreen = document.getElementById('splash-screen');
+
+// Check if splash screen has been shown before
+if (!sessionStorage.getItem('splashShown')) {
+    splashScreen.style.display = 'flex'; // Show splash screen
+
+    setTimeout(() => {
+        splashScreen.style.opacity = '0'; // Start fading out
+
+        setTimeout(() => {
+            splashScreen.style.display = 'none'; // Hide splash screen
+            sessionStorage.setItem('splashShown', 'true'); // Set flag in sessionStorage
+        }, 1000); // Duration for fade-out transition
+    }, 2000); // Duration to show splash screen
+} else {
+    splashScreen.style.display = 'none'; // Skip splash screen if already shown
+}
+
+
 document.getElementById('otp-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
