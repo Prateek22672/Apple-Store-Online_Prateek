@@ -1,29 +1,24 @@
 function validateForm(event) {
-    event.preventDefault(); // Prevent the default form submission
-    
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('pass').value;
+    event.preventDefault();  // Fixed typo
+
+    const name = document.getElementById('name').value;
     const errorMessage = document.getElementById('error-message');
 
-    if (password === "") {
-        // Display error message if email or password is incorrect
+    // Simple validation for name and password
+    if (name === "") {
         errorMessage.style.display = 'block';
-    } else { 
-        // Store email in local storage
-        localStorage.setItem('email', email);
-        
-        // If both fields are filled correctly, redirect to the next page
+        errorMessage.textContent = 'Please enter your name to Continue.';
+    } else {
+        // Store name in local storage
+        localStorage.setItem('name', name);
+
+        // Redirect to store.html
         window.location.href = 'store.html';
     }
 }
 
-// Add event listener for Enter key press
-document.getElementById('email').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        validateForm(event);
-    }
-});
-document.getElementById('pass').addEventListener('keypress', function(event) {
+// Add event listeners for 'Enter' key press on both name and password input fields
+document.getElementById('name').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         validateForm(event);
     }
