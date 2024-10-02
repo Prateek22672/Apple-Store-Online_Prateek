@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (applyCouponButton) {
         applyCouponButton.addEventListener('click', applyCoupon);
     }
-
+ 
     const continueButtons = document.querySelectorAll('#Continue');
     continueButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -151,3 +151,20 @@ function applyCoupon() {
         totalTextElement.innerText = 'Your bag total is ₹0.00 or ₹0.00/mo.^';
     }
 }
+
+
+
+
+
+const splashScreen = document.getElementById('splash-screen');
+
+// Always show the splash screen on page load
+splashScreen.style.display = 'flex'; // Show splash screen
+
+setTimeout(() => {
+    splashScreen.style.opacity = '0'; // Start fading out
+
+    setTimeout(() => {
+        splashScreen.style.display = 'none'; // Hide splash screen
+    }, 800); // Duration for fade-out transition
+}, 500); // Duration to show splash screen
