@@ -32,22 +32,48 @@ body {
 
 .splash-content p {
     text-align: center;
-    bottom: 15%;
+    bottom: 10%;
     left: 0;
     right: 0;
     position: absolute;
     font-size: 15px;
 }
 
+/* HTML: <div class="loader"></div> */
+.loader {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    width: 60px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#ffffff 90%,#ffffff00);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+  }
+  @keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
+
+
+
+  
+
 .card {
     position: absolute;
     width: 200px;
-    top: 15px;
+    top: -5px;
 }
 
 .heading1 {
+    z-index: 1;
     position: absolute;
-    bottom: -8px;
+    bottom: 13.3%;
     font-size: 10px;
 }
 
@@ -61,9 +87,10 @@ body {
 */
 
 .ppay {
+    z-index: -1;
     position: absolute;
-    width: 200px;
-    bottom: -10px;
+    width: 150px;
+    bottom: -2.5%;
 }
 
 .billing-container {
@@ -74,7 +101,7 @@ body {
     width: 400px;
     max-width: 90%;
     position: relative;
-    margin-top: -30px;
+    margin-top: -35px;
 }
 
 .appleCard {
@@ -205,21 +232,14 @@ body {
 
 .heading1 {
     position: absolute;
-    bottom: 0px;
+    bottom: 16.5%;
     font-size: 10px;
-}
-
-.heading2 {
-    position: absolute;
-    bottom: 20px;
-    font-size: 2rem;
-    color: rgb(17, 17, 46);
 }
 
 .ppay {
     position: absolute;
     width: 200px;
-    bottom: 0;
+    bottom: -3%;
 }
 
 }
