@@ -236,22 +236,22 @@ nav .desktop-nav {
     padding-top: 75px;
     display: flex;
     background-color: #f5f5f7;
-    margin-bottom: -30px;
+    padding-bottom: 10px;
 }
 
 .quote1 {
-    margin-left: 68px;
-    font-size: 80px;
-    font-weight: 580;
-    padding-right: 820px;
+    margin-left: 70px;
+    font-size: 75px;
+    font-weight: 550;
+    padding-right: 50%;
     background-color: #f5f5f7;
-    margin-top: 0px;
+    margin-top: -20px;
 }
 
 .quote2 {
     font-size: 28px;
     font-weight: 600;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 /*-----------------------------------------*/
@@ -709,9 +709,11 @@ nav .desktop-nav {
     text-decoration: none;
 }
 
+/* (#!Top) Quick links and Quick links Button code*/
+
 .quick_links_heading {
     padding-top: 50px;
-    padding-left: 80px;
+    padding-left: 145px;
     font-size: 33px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
@@ -719,11 +721,12 @@ nav .desktop-nav {
 
 .quick_links {
     padding: 25px;
-    padding-left: 140px;
+    padding-left: 130px;
     font-family: 'Inter', sans-serif;
+    background-color: transparent;
 }
 
-#b1 {
+#b1,#b2,#b3 {
     background-color: white;
     font-size: 15px;
     width: 120px;
@@ -733,15 +736,17 @@ nav .desktop-nav {
     margin-left: -50px;
 }
 
-#b1:hover {
+#b1:hover, #b2:hover, #b3:hover {
     background-color: black;
     cursor: pointer;
     color: white;
 }
 
-#b1:not(:first-child) {
+#b1,#b2,#b3:not(:first-child) {
     margin-left: 15px;
 }
+
+/*(#!Bottom) ^ Quick links and Quick links Button code ^ */
 
 .footer {
     padding-left: 50px;
