@@ -16,7 +16,7 @@ function validateForm(event) {
         window.location.href = 'store.html';
     }
 }
-
+ 
 // Add event listeners for 'Enter' key press on both name and password input fields
 document.getElementById('name').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
@@ -27,17 +27,12 @@ document.getElementById('name').addEventListener('keypress', function(event) {
 
 const splashScreen = document.getElementById('splash-screen');
 
-if (!sessionStorage.getItem('splashShown')) {
-    splashScreen.style.display = 'flex';
+splashScreen.style.display = '';
+
+setTimeout(() => {
+    splashScreen.style.opacity = '0';
 
     setTimeout(() => {
-        splashScreen.style.opacity = '0';
-
-        setTimeout(() => {
-            splashScreen.style.display = 'none';
-            sessionStorage.setItem('splashShown', 'true');
-        }, 1000);
-    }, 2000);
-} else {
-    splashScreen.style.display = 'none';
-}
+        splashScreen.style.display = 'none';
+    }, 1000);
+}, 2000);
