@@ -23,21 +23,16 @@ document.getElementById('payment-form').addEventListener('submit', function(even
 
 const splashScreen = document.getElementById('splash-screen');
 
-// Check if splash screen has been shown before
-if (!sessionStorage.getItem('splashShown')) {
-    splashScreen.style.display = 'flex'; // Show splash screen
+splashScreen.style.display = 'flex';
+
+setTimeout(() => {
+    splashScreen.style.opacity = '0';//start fadding it out
 
     setTimeout(() => {
-        splashScreen.style.opacity = '0'; // Start fading out
+        splashScreen.style.display = 'none';//hiding splash screen
+    }, 1000);//it is the duration for fade-out transisition
+}, 2000);//this is the duration to show splash screen 
 
-        setTimeout(() => {
-            splashScreen.style.display = 'none'; // Hide splash screen
-            sessionStorage.setItem('splashShown', 'true'); // Set flag in sessionStorage
-        }, 1000); // Duration for fade-out transition
-    }, 2000); // Duration to show splash screen
-} else {
-    splashScreen.style.display = 'none'; // Skip splash screen if already shown
-}
 
 
 document.getElementById('otp-form').addEventListener('submit', function(event) {
