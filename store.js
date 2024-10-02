@@ -1,21 +1,18 @@
 const splashScreen = document.getElementById('splash-screen');
 
-// Check if splash screen has been shown before
-if (!sessionStorage.getItem('splashShown')) {
-    splashScreen.style.display = 'flex'; // Show splash screen
+// Always show the splash screen on page load
+splashScreen.style.display = 'flex'; // Show splash screen
+
+setTimeout(() => {
+    splashScreen.style.opacity = '0'; // Start fading out
 
     setTimeout(() => {
-        splashScreen.style.opacity = '0'; // Start fading out
+        splashScreen.style.display = 'none'; // Hide splash screen
+    }, 1000); // Duration for fade-out transition
+}, 1600); // Duration to show splash screen
 
-        setTimeout(() => {
-            splashScreen.style.display = 'none'; // Hide splash screen
-            sessionStorage.setItem('splashShown', 'true'); // Set flag in sessionStorage
-        }, 1000); // Duration for fade-out transition
-    }, 2000); // Duration to show splash screen
-} else {
-    splashScreen.style.display = 'none'; // Skip splash screen if already shown
-}
 
+ 
 // Button navigation
 const pages = {
     b1: 'status.html',
@@ -40,3 +37,4 @@ if (name) {
 } else if (email) {
     greetingElement.innerHTML = `Hello ${email},<br>`;
 }
+
