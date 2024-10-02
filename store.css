@@ -72,6 +72,20 @@ body {
     right: 0;
 }
 
+.Quantity {
+    position: sticky;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    font-size: 12px;
+    padding-left: 5px;
+    right: 223px;
+    margin-top: -25.5px;
+    margin-left: 6px;
+}
+
 .nav-container nav {
     width: 1000px;
     margin: 0 auto;
